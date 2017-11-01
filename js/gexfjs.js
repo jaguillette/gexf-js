@@ -1034,10 +1034,12 @@
                     }
                     if (_fs > GexfJS.params.textDisplayThreshold) {
                         GexfJS.ctxGraphe.fillStyle = ((i != GexfJS.params.activeNode) && _tagsMisEnValeur.length && ((!_d.isTag) || (_centralNode != -1)) ? "rgba(60,60,60,0.7)" : "rgb(0,0,0)");
-                        GexfJS.ctxGraphe.font = Math.floor(_fs) + "px Arial";
-                        GexfJS.ctxGraphe.textAlign = "center";
-                        GexfJS.ctxGraphe.textBaseline = "middle";
-                        GexfJS.ctxGraphe.fillText(_d.l, _d.real_coords.x, _d.real_coords.y);
+                        if (GexfJS.params.showConnectedNodeLabel) {
+                          GexfJS.ctxGraphe.font = Math.floor(_fs) + "px Arial";
+                          GexfJS.ctxGraphe.textAlign = "center";
+                          GexfJS.ctxGraphe.textBaseline = "middle";
+                          GexfJS.ctxGraphe.fillText(_d.l, _d.real_coords.x, _d.real_coords.y);
+                        }
                     }
                 }
             }

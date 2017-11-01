@@ -49,6 +49,11 @@ GexfJS.setParams({
             this setting can't be changed from the User Interface
         */
     showEdgeLabel : true,
+    showConnectedNodeLabel : true,
+    /*
+            Show labels on nodes connected to hovered or highlighted node
+            this setting can't be changed from the User Interface
+    */
     sortNodeAttributes: true,
         /*
             Alphabetically sort node attributes
